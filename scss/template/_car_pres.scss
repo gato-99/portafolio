@@ -1,0 +1,80 @@
+.conten {
+  width: 100%;
+  height: calc(100vh - 3.125em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  &__contenInfo {
+    width: 90%;
+    height: 90%;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  &__contenImg {
+    width: 12.5em;
+    height: 15.625em;
+    border-radius: 10px;
+    margin: 0 auto;
+    animation: 2s normal contenI;
+    @keyframes contenI {
+      0% {
+        transform: translateX(-200%);
+        opacity: -1;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1400px) {
+      font-size: 25px;
+    }
+    @media screen and (min-width: 2000px) {
+      font-size: 45px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $text-color;
+    border-radius: 0.625rem;
+  }
+  &__info {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($principal-color, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+    animation: 1.5s normal conIf;
+    border: 1px solid $text-color;
+
+    @keyframes conIf {
+      0% {
+        transform: rotate(180deg) scale(0);
+        opacity: -2;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      height: 60%;
+    }
+    p {
+      font-size: 1em;
+      text-align: center;
+      padding: 5px;
+      color: $text-color;
+      @media screen and (min-width: 1400px) {
+        font-size: 1.3em;
+      }
+      @media screen and (min-width: 2000px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

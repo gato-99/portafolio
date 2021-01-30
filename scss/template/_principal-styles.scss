@@ -1,0 +1,13 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  background: rgba($principal-color, 0.952);
+  animation: 2s normal body;
+
+  @keyframes body {
+    0% {
+      opacity: -5;
+    }
+  }
+}

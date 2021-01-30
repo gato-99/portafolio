@@ -1,0 +1,108 @@
+.con-tarjetas {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  &__cars {
+    padding: 10px;
+    width: 18.75em;
+    height: 25em;
+    background: rgba($principal-color, 0.5);
+    box-shadow: 0 0 3px $text-color;
+    border-radius: 10px;
+    animation: 2s normal Cars;
+    transition: box-shadow 0.4s;
+    @keyframes Cars {
+      0% {
+        transform: scale(0) rotateY(360deg);
+      }
+    }
+    @media screen and (min-width: 1400px) {
+      font-size: 17px;
+    }
+    @media screen and (min-width: 2000px) {
+      font-size: 30px;
+    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 40% 10%;
+    place-items: center;
+    &:hover {
+      box-shadow: 0 0 5px $text-color;
+    }
+  }
+  &__contenImg {
+    width: 90%;
+    height: 100%;
+    animation: 2s normal Cars;
+    animation-delay: 0.1s;
+    grid-column: span 2;
+    align-self: start;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba($text-color, 0.2);
+    border-radius: 10px;
+  }
+  &__text {
+    grid-column: span 2;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    width: 100%;
+    height: 100%;
+    animation: 2s normal TexC;
+    animation-delay: 0.2s;
+    @keyframes TexC {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    p {
+      text-align: center;
+      @media screen and (min-width: 1400px) {
+        font-size: 1.3rem;
+      }
+      @media screen and (min-width: 2000px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &__mas {
+    grid-column: -2;
+    align-self: flex-end;
+    justify-self: self-end;
+    display: flex;
+    color: $text-color;
+    text-decoration: none;
+    padding: 2.5px 5px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    // border-bottom: 1px solid transparent;
+    transition: border 0.2s;
+    @media screen and (min-width: 2000px) {
+      font-size: 30px;
+    }
+    &:hover {
+      color: #7a2edd;
+      border: 1px solid #8b34fd;
+      // border-bottom: 1px solid #7a2edd;
+
+      transition: color 0.2s;
+    }
+    i {
+      padding-left: 5px;
+      @media screen and (min-width: 2000px) {
+        padding-left: 10px;
+      }
+    }
+  }
+}
